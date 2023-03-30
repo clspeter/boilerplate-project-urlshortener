@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -6,6 +5,7 @@ const dns = require('dns');
 var bodyParser = require('body-parser')
 const shortid = require('shortid');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 app.use(bodyParser.urlencoded({ extended: false }));
